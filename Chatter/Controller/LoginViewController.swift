@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func noAcctButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: TO_CREATE_ACCT, sender: self)
     }
     
 }

@@ -10,4 +10,6 @@ import Foundation
 
 
 let LOGIN_SEGUE = "goToLogin"
+let TO_CREATE_ACCT = "goToCreate"
+let UNWIND = "unwindToChannel"
 
