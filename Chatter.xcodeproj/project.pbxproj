@@ -14,6 +14,7 @@
 		25C03B94215464C900AFEE8F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B93215464C900AFEE8F /* SWRevealViewController.m */; };
 		25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B95215467A800AFEE8F /* ChatViewController.swift */; };
 		25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B97215467BD00AFEE8F /* ChannelViewController.swift */; };
+		25C03B9A21546D0900AFEE8F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B9921546D0900AFEE8F /* GradientView.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		25C03B93215464C900AFEE8F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		25C03B95215467A800AFEE8F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		25C03B97215467BD00AFEE8F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		25C03B9921546D0900AFEE8F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 		25C03B8E21545BC400AFEE8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				25C03B9921546D0900AFEE8F /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */,
 				25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */,
+				25C03B9A21546D0900AFEE8F /* GradientView.swift in Sources */,
 				25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */,
 				25C03B94215464C900AFEE8F /* SWRevealViewController.m in Sources */,
 			);
