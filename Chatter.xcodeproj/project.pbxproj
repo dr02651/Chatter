@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B7B21545B5000AFEE8F /* AppDelegate.swift */; };
-		25C03B7E21545B5000AFEE8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B7D21545B5000AFEE8F /* ViewController.swift */; };
 		25C03B8121545B5000AFEE8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C03B7F21545B5000AFEE8F /* Main.storyboard */; };
 		25C03B8321545B5100AFEE8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C03B8221545B5100AFEE8F /* Assets.xcassets */; };
 		25C03B8621545B5100AFEE8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C03B8421545B5100AFEE8F /* LaunchScreen.storyboard */; };
 		25C03B94215464C900AFEE8F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B93215464C900AFEE8F /* SWRevealViewController.m */; };
+		25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B95215467A800AFEE8F /* ChatViewController.swift */; };
+		25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B97215467BD00AFEE8F /* ChannelViewController.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,7 +21,6 @@
 		18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C03B7821545B5000AFEE8F /* Chatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C03B7B21545B5000AFEE8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25C03B7D21545B5000AFEE8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25C03B8021545B5000AFEE8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25C03B8221545B5100AFEE8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25C03B8521545B5100AFEE8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +28,8 @@
 		25C03B91215464C800AFEE8F /* Chatter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chatter-Bridging-Header.h"; sourceTree = "<group>"; };
 		25C03B92215464C900AFEE8F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		25C03B93215464C900AFEE8F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		25C03B95215467A800AFEE8F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		25C03B97215467BD00AFEE8F /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +83,8 @@
 		25C03B8D21545BB900AFEE8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25C03B7D21545B5000AFEE8F /* ViewController.swift */,
+				25C03B95215467A800AFEE8F /* ChatViewController.swift */,
+				25C03B97215467BD00AFEE8F /* ChannelViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,8 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C03B7E21545B5000AFEE8F /* ViewController.swift in Sources */,
 				25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */,
+				25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */,
+				25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */,
 				25C03B94215464C900AFEE8F /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
