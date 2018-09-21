@@ -18,6 +18,7 @@
 		25C03B9C21547C4700AFEE8F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B9B21547C4700AFEE8F /* LoginViewController.swift */; };
 		25C03B9F21547D4800AFEE8F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03B9E21547D4800AFEE8F /* Constants.swift */; };
 		25C03BA12154857700AFEE8F /* CreateAcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03BA02154857700AFEE8F /* CreateAcctViewController.swift */; };
+		25C03BA421549C8000AFEE8F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C03BA321549C8000AFEE8F /* AuthService.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		25C03B9B21547C4700AFEE8F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		25C03B9E21547D4800AFEE8F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		25C03BA02154857700AFEE8F /* CreateAcctViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcctViewController.swift; sourceTree = "<group>"; };
+		25C03BA321549C8000AFEE8F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 		25C03B7A21545B5000AFEE8F /* Chatter */ = {
 			isa = PBXGroup;
 			children = (
+				25C03BA221549C6000AFEE8F /* Services */,
 				25C03B9D21547D2D00AFEE8F /* utils */,
 				25C03B902154649100AFEE8F /* Supporting Files */,
 				25C03B8F21545BCD00AFEE8F /* Model */,
@@ -131,6 +134,14 @@
 				25C03B9E21547D4800AFEE8F /* Constants.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		25C03BA221549C6000AFEE8F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				25C03BA321549C8000AFEE8F /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		4FB0E51EF4CEE0D098C7037C /* Pods */ = {
@@ -272,6 +283,7 @@
 				25C03B9C21547C4700AFEE8F /* LoginViewController.swift in Sources */,
 				25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */,
 				25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */,
+				25C03BA421549C8000AFEE8F /* AuthService.swift in Sources */,
 				25C03B9F21547D4800AFEE8F /* Constants.swift in Sources */,
 				25C03B9A21546D0900AFEE8F /* GradientView.swift in Sources */,
 				25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */,
