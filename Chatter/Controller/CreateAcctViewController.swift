@@ -17,6 +17,8 @@ class CreateAcctViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
+    
     // Variables
     private(set) var avatarName = "profileDefault"
      private(set) var avatarColor = "[0.5, 0.5, 0.5, 1]"
@@ -37,6 +39,7 @@ class CreateAcctViewController: UIViewController {
     
     
     @IBAction func chooseAvatarPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: SHOW_ICONS, sender: self)
     }
     
     @IBAction func generateBgcolorPressed(_ sender: UIButton) {

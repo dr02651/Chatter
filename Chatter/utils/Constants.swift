@@ -24,6 +24,8 @@ let HEADER = [
 let LOGIN_SEGUE = "goToLogin"
 let TO_CREATE_ACCT = "goToCreate"
 let UNWIND = "unwindToChannel"
+let SHOW_ICONS = "showIcons"
+let BACK_TO_CREATE_ACCT = "backToCreateAcct"
 
 
 // User Defaults
