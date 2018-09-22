@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -18,7 +19,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func closeButtonPressed(_ sender: UIButton) {
@@ -26,6 +26,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        SVProgressHUD.show()
     }
     
     @IBAction func noAcctButtonPressed(_ sender: UIButton) {
