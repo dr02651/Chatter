@@ -28,6 +28,9 @@
 		25D4809C2156B10500C575CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4809A2156B10500C575CB /* ProfileViewController.swift */; };
 		25D4809D2156B10500C575CB /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D4809B2156B10500C575CB /* ProfileViewController.xib */; };
 		25D480A02156B51900C575CB /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4809F2156B51900C575CB /* RoundedView.swift */; };
+		25D480A32156C62900C575CB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480A12156C62900C575CB /* EditProfileViewController.swift */; };
+		25D480A42156C62900C575CB /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D480A22156C62900C575CB /* EditProfileViewController.xib */; };
+		25D480AE2156E52200C575CB /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480AD2156E52200C575CB /* IconPresentable.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +61,9 @@
 		25D4809A2156B10500C575CB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		25D4809B2156B10500C575CB /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		25D4809F2156B51900C575CB /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		25D480A12156C62900C575CB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		25D480A22156C62900C575CB /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		25D480AD2156E52200C575CB /* IconPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPresentable.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +127,7 @@
 				25C03BA02154857700AFEE8F /* CreateAcctViewController.swift */,
 				25D4808B2155E61100C575CB /* IconsViewController.swift */,
 				25D4809A2156B10500C575CB /* ProfileViewController.swift */,
+				25D480A12156C62900C575CB /* EditProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -167,6 +174,7 @@
 			children = (
 				25C03BA321549C8000AFEE8F /* AuthService.swift */,
 				25D480892155AAB300C575CB /* UserDataService.swift */,
+				25D480AD2156E52200C575CB /* IconPresentable.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				25D4809B2156B10500C575CB /* ProfileViewController.xib */,
+				25D480A22156C62900C575CB /* EditProfileViewController.xib */,
 			);
 			path = "XIB's";
 			sourceTree = "<group>";
@@ -259,6 +268,7 @@
 			files = (
 				25C03B8621545B5100AFEE8F /* LaunchScreen.storyboard in Resources */,
 				25C03B8321545B5100AFEE8F /* Assets.xcassets in Resources */,
+				25D480A42156C62900C575CB /* EditProfileViewController.xib in Resources */,
 				25C03B8121545B5000AFEE8F /* Main.storyboard in Resources */,
 				25D4809D2156B10500C575CB /* ProfileViewController.xib in Resources */,
 				25D480992156AF8600C575CB /* Creation.storyboard in Resources */,
@@ -329,7 +339,9 @@
 				25C03B9F21547D4800AFEE8F /* Constants.swift in Sources */,
 				25D480A02156B51900C575CB /* RoundedView.swift in Sources */,
 				25D4808C2155E61100C575CB /* IconsViewController.swift in Sources */,
+				25D480A32156C62900C575CB /* EditProfileViewController.swift in Sources */,
 				25D480902155FC9A00C575CB /* RoundedImage.swift in Sources */,
+				25D480AE2156E52200C575CB /* IconPresentable.swift in Sources */,
 				25C03B9A21546D0900AFEE8F /* GradientView.swift in Sources */,
 				25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */,
 				25D4809C2156B10500C575CB /* ProfileViewController.swift in Sources */,

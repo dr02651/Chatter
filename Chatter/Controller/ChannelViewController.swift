@@ -25,18 +25,13 @@ class ChannelViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChanged), name: NOTIF_USER_DATA_CHANGED, object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        setUpUserInfo()
+    }
+    
     // MARK: Notification / User data changed / set channel button text and user image
     @objc func userDataChanged(_ notification: Notification) {
-        if AuthService.instance.isLoggedIn {
-            loginButton.setTitle(UserDataService.instance.name, for: .normal)
-            userImage.image = UIImage(named: UserDataService.instance.avatarName) 
-            userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
-        } else {
-            loginButton.setTitle("login", for: .normal)
-            userImage.image = UIImage(named: "menuProfileIcon")
-            userImage.backgroundColor = UIColor.clear
-            
-        }
+        setUpUserInfo()
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -51,6 +46,22 @@ class ChannelViewController: UIViewController {
         
     }
     
-    @IBOutlet weak var addChannelButtonPressed: UIButton!
+    
+    func setUpUserInfo() {
+        if AuthService.instance.isLoggedIn {
+            loginButton.setTitle(UserDataService.instance.name, for: .normal)
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        } else {
+            loginButton.setTitle("login", for: .normal)
+            userImage.image = UIImage(named: "menuProfileIcon")
+            userImage.backgroundColor = UIColor.clear
+            
+        }
+    }
+    
+    @IBAction func addChannelButtonPressed(_ sender: UIButton) {
+    }
+    
 
 }

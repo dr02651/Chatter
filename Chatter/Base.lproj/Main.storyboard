@@ -108,6 +108,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8g-z0-teG">
                                         <rect key="frame" x="281" y="97.5" width="22" height="22"/>
                                         <state key="normal" image="addChannelButton"/>
+                                        <connections>
+                                            <action selector="addChannelButtonPressed:" destination="cFL-7S-k5w" eventType="touchUpInside" id="Fwp-zj-D9q"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-8p-3Tk" customClass="RoundedImage" customModule="Chatter" customModuleProvider="target">
                                         <rect key="frame" x="8" y="530" width="75" height="75"/>
@@ -195,7 +198,6 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addChannelButtonPressed" destination="k8g-z0-teG" id="wuX-2z-zXm"/>
                         <outlet property="loginButton" destination="Cxw-Zn-jZF" id="IgC-rI-7yr"/>
                         <outlet property="userImage" destination="Xrz-8p-3Tk" id="2Un-CZ-dX1"/>
                         <segue destination="vrv-dA-bnx" kind="show" identifier="goToLogin" id="jmF-cg-5Rj"/>

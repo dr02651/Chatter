@@ -9,7 +9,8 @@
 import UIKit
 import SVProgressHUD
 
-class CreateAcctViewController: UIViewController {
+class CreateAcctViewController: UIViewController, IconPresentable {
+    
     
     // Outlets
     @IBOutlet weak var usernameText: UITextField!
@@ -61,6 +62,11 @@ class CreateAcctViewController: UIViewController {
         performSegue(withIdentifier: SHOW_ICONS, sender: self)
     }
     
+    func goToIcons() {
+        present(IconsViewController(), animated: true, completion: nil)
+        //performSegue(withIdentifier: SHOW_ICONS, sender: self)
+    }
+    
     // MARK: Generate avatar background colors
     @IBAction func generateBgcolorPressed(_ sender: UIButton) {
         let r = CGFloat(arc4random_uniform(255)) / 255
@@ -104,6 +110,8 @@ class CreateAcctViewController: UIViewController {
                             if success {
                                 self.unwindToHome()
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_CHANGED, object: nil)
+                            } else {
+                                self.createAcctButton.isEnabled = true
                             }
                         })
                     }
