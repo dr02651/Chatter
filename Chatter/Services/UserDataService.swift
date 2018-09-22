@@ -21,7 +21,7 @@ class UserDataService {
     func setUserData(id: String, color: String, avatarName: String, email: String, name: String) {
         self.id = id
         self.avatarColor = color
-        self.avatarName = name
+        self.avatarName = avatarName
         self.email = email
         self.name = name
     }
@@ -47,9 +47,9 @@ class UserDataService {
         let defaultColor = UIColor.lightGray
         
         guard let rUnwrapped = r else {return defaultColor}
-        guard let gUnwrapped = r else {return defaultColor}
-        guard let bUnwrapped = r else {return defaultColor}
-        guard let aUnwrapped = r else {return defaultColor}
+        guard let gUnwrapped = g else {return defaultColor}
+        guard let bUnwrapped = b else {return defaultColor}
+        guard let aUnwrapped = a else {return defaultColor}
         
         let rFloat = CGFloat(rUnwrapped.doubleValue)
         let gFloat = CGFloat(gUnwrapped.doubleValue)
@@ -57,5 +57,18 @@ class UserDataService {
         let aFloat = CGFloat(aUnwrapped.doubleValue)
         
         return UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+    }
+    
+    func logoutUser() {
+        
+        id = ""
+        avatarColor = ""
+        avatarName = ""
+        email = ""
+        name = ""
+        
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.authToken = ""
+        AuthService.instance.userEmail = ""
     }
 }

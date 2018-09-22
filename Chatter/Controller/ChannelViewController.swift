@@ -29,7 +29,7 @@ class ChannelViewController: UIViewController {
     @objc func userDataChanged(_ notification: Notification) {
         if AuthService.instance.isLoggedIn {
             loginButton.setTitle(UserDataService.instance.name, for: .normal)
-            userImage.image = UIImage(named: UserDataService.instance.avatarName) //?? UIImage(named: "menuProfileIcon")
+            userImage.image = UIImage(named: UserDataService.instance.avatarName) 
             userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         } else {
             loginButton.setTitle("login", for: .normal)
@@ -40,7 +40,15 @@ class ChannelViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: LOGIN_SEGUE, sender: self)
+        
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileViewController()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: LOGIN_SEGUE, sender: self)
+        }
+        
     }
     
     @IBOutlet weak var addChannelButtonPressed: UIButton!
