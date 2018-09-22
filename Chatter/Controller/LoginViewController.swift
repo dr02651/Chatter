@@ -18,7 +18,11 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpView()
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
 
     @IBAction func closeButtonPressed(_ sender: UIButton) {
@@ -31,6 +35,15 @@ class LoginViewController: UIViewController {
     
     @IBAction func noAcctButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: TO_CREATE_ACCT, sender: self)
+    }
+    
+     // MARK: Set up placeholder attributes and Gesture recogn
+    func setUpView() {
+        usernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
+        passwordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
     }
     
 }
