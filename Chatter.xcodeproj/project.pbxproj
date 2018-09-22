@@ -31,6 +31,8 @@
 		25D480A32156C62900C575CB /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480A12156C62900C575CB /* EditProfileViewController.swift */; };
 		25D480A42156C62900C575CB /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D480A22156C62900C575CB /* EditProfileViewController.xib */; };
 		25D480AE2156E52200C575CB /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480AD2156E52200C575CB /* IconPresentable.swift */; };
+		25D480B42157026900C575CB /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B32157026900C575CB /* MessageService.swift */; };
+		25D480B6215702A400C575CB /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B5215702A400C575CB /* Channel.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,8 @@
 		25D480A12156C62900C575CB /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		25D480A22156C62900C575CB /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		25D480AD2156E52200C575CB /* IconPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPresentable.swift; sourceTree = "<group>"; };
+		25D480B32157026900C575CB /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		25D480B5215702A400C575CB /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +151,7 @@
 		25C03B8F21545BCD00AFEE8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				25D480B5215702A400C575CB /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 				25C03BA321549C8000AFEE8F /* AuthService.swift */,
 				25D480892155AAB300C575CB /* UserDataService.swift */,
 				25D480AD2156E52200C575CB /* IconPresentable.swift */,
+				25D480B32157026900C575CB /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -330,7 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C03B9C21547C4700AFEE8F /* LoginViewController.swift in Sources */,
+				25D480B6215702A400C575CB /* Channel.swift in Sources */,
 				25C03BA62154A7A800AFEE8F /* RoundedButton.swift in Sources */,
+				25D480B42157026900C575CB /* MessageService.swift in Sources */,
 				25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */,
 				25D4808A2155AAB300C575CB /* UserDataService.swift in Sources */,
 				25D4808E2155EA7400C575CB /* IconCollectionViewCell.swift in Sources */,
