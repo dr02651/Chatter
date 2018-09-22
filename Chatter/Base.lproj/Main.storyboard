@@ -197,6 +197,7 @@
                     <connections>
                         <outlet property="addChannelButtonPressed" destination="k8g-z0-teG" id="wuX-2z-zXm"/>
                         <outlet property="loginButton" destination="Cxw-Zn-jZF" id="IgC-rI-7yr"/>
+                        <outlet property="userImage" destination="Xrz-8p-3Tk" id="2Un-CZ-dX1"/>
                         <segue destination="ycH-K4-RNd" kind="show" identifier="goToLogin" id="QMI-Q1-TWS"/>
                     </connections>
                 </viewController>
