@@ -32,6 +32,13 @@ class SocketService: NSObject {
         socket.disconnect()
     }
     
+    
+    
+}
+
+//MARK: Adding channels ##############################################################################
+extension SocketService {
+    
     // Emit - Add channel
     func addChannelWith(name: String, description: String, completion: @escaping CompletionHandler) {
         socket.emit("newChannel", name, description)
@@ -50,6 +57,17 @@ class SocketService: NSObject {
         }
     }
     
+}
+
+//MARK: Adding messages ##############################################################################
+extension SocketService {
+    
+    func addMessagesWith(messageBody: String, userId: String, channelId: String, completion: @escaping CompletionHandler) {
+        let user = UserDataService.instance
+        
+        socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
+        completion(true)
+    }
 }
 
 

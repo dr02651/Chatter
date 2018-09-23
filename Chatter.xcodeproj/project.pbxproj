@@ -38,6 +38,7 @@
 		25D480BC21572F7800C575CB /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D480BA21572F7800C575CB /* AddChannelVC.xib */; };
 		25D480BE21573A7600C575CB /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480BD21573A7600C575CB /* SocketService.swift */; };
 		25D480C0215755BB00C575CB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480BF215755BB00C575CB /* Message.swift */; };
+		25D480C2215762A800C575CB /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480C1215762A800C575CB /* KeyboardBoundView.swift */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		25D480BA21572F7800C575CB /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		25D480BD21573A7600C575CB /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		25D480BF215755BB00C575CB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		25D480C1215762A800C575CB /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 		25C03B8E21545BC400AFEE8F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				25D480C1215762A800C575CB /* KeyboardBoundView.swift */,
 				25C03B9921546D0900AFEE8F /* GradientView.swift */,
 				25C03BA52154A7A800AFEE8F /* RoundedButton.swift */,
 				25D4808D2155EA7400C575CB /* IconCollectionViewCell.swift */,
@@ -373,6 +376,7 @@
 				25C03B98215467BD00AFEE8F /* ChannelViewController.swift in Sources */,
 				25D4809C2156B10500C575CB /* ProfileViewController.swift in Sources */,
 				25D480C0215755BB00C575CB /* Message.swift in Sources */,
+				25D480C2215762A800C575CB /* KeyboardBoundView.swift in Sources */,
 				25C03B94215464C900AFEE8F /* SWRevealViewController.m in Sources */,
 				25C03BA12154857700AFEE8F /* CreateAcctViewController.swift in Sources */,
 			);
