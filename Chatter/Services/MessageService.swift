@@ -40,4 +40,8 @@ class MessageService {
         }
     }
     
+    func addToChannelArray(_ channel: Channel) {
+        channels.append(channel)
+    }
+    
 }
