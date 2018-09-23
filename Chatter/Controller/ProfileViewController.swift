@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController {
     
     func setUpView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleBgTap))
-        view.addGestureRecognizer(tap)
+        BgView.addGestureRecognizer(tap)
         
         nameLabel.text = UserDataService.instance.name
         emailLabel.text = UserDataService.instance.email

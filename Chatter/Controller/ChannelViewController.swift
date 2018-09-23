@@ -13,11 +13,15 @@ class ChannelViewController: UIViewController {
     // Outlets
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var userImage: RoundedImage!
+    @IBOutlet weak var channelTableView: UITableView!
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        channelTableView.delegate = self
+        channelTableView.dataSource = self
         
         // Customize the amount of the rear view controller that is shown on menu button tap (view width - 60pt)
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
@@ -33,7 +37,7 @@ class ChannelViewController: UIViewController {
     @objc func userDataChanged(_ notification: Notification) {
         setUpUserInfo()
     }
-
+    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
         if AuthService.instance.isLoggedIn {
@@ -61,7 +65,44 @@ class ChannelViewController: UIViewController {
     }
     
     @IBAction func addChannelButtonPressed(_ sender: UIButton) {
+        
+        if AuthService.instance.isLoggedIn {
+            let addChannelVc = AddChannelVC()
+            addChannelVc.modalPresentationStyle = .custom
+            present(addChannelVc, animated: true, completion: nil)
+        }
     }
     
-
+    
 }
+
+extension ChannelViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MessageService.instance.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath) as? ChannelCell else {return ChannelCell()}
+        cell.configureCell(channel: MessageService.instance.channels[indexPath.row])
+        return cell
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

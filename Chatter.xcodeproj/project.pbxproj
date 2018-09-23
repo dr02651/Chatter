@@ -33,6 +33,9 @@
 		25D480AE2156E52200C575CB /* IconPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480AD2156E52200C575CB /* IconPresentable.swift */; };
 		25D480B42157026900C575CB /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B32157026900C575CB /* MessageService.swift */; };
 		25D480B6215702A400C575CB /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B5215702A400C575CB /* Channel.swift */; };
+		25D480B821570BD400C575CB /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B721570BD400C575CB /* ChannelCell.swift */; };
+		25D480BB21572F7800C575CB /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D480B921572F7800C575CB /* AddChannelVC.swift */; };
+		25D480BC21572F7800C575CB /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25D480BA21572F7800C575CB /* AddChannelVC.xib */; };
 		7A2A64816A3DBC2EBCC1A930 /* Pods_Chatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA4E8A5F5A14F27F729500 /* Pods_Chatter.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,9 @@
 		25D480AD2156E52200C575CB /* IconPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPresentable.swift; sourceTree = "<group>"; };
 		25D480B32157026900C575CB /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		25D480B5215702A400C575CB /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		25D480B721570BD400C575CB /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		25D480B921572F7800C575CB /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
+		25D480BA21572F7800C575CB /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		50E753C5971DE40E8BB1A202 /* Pods-Chatter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.release.xcconfig"; sourceTree = "<group>"; };
 		F0A9DD78AA09B01C9A927ACA /* Pods-Chatter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chatter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chatter/Pods-Chatter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +138,7 @@
 				25D4808B2155E61100C575CB /* IconsViewController.swift */,
 				25D4809A2156B10500C575CB /* ProfileViewController.swift */,
 				25D480A12156C62900C575CB /* EditProfileViewController.swift */,
+				25D480B921572F7800C575CB /* AddChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -144,6 +151,7 @@
 				25D4808D2155EA7400C575CB /* IconCollectionViewCell.swift */,
 				25D4808F2155FC9A00C575CB /* RoundedImage.swift */,
 				25D4809F2156B51900C575CB /* RoundedView.swift */,
+				25D480B721570BD400C575CB /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			children = (
 				25D4809B2156B10500C575CB /* ProfileViewController.xib */,
 				25D480A22156C62900C575CB /* EditProfileViewController.xib */,
+				25D480BA21572F7800C575CB /* AddChannelVC.xib */,
 			);
 			path = "XIB's";
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C03B8621545B5100AFEE8F /* LaunchScreen.storyboard in Resources */,
+				25D480BC21572F7800C575CB /* AddChannelVC.xib in Resources */,
 				25C03B8321545B5100AFEE8F /* Assets.xcassets in Resources */,
 				25D480A42156C62900C575CB /* EditProfileViewController.xib in Resources */,
 				25C03B8121545B5000AFEE8F /* Main.storyboard in Resources */,
@@ -339,7 +349,9 @@
 				25D480B6215702A400C575CB /* Channel.swift in Sources */,
 				25C03BA62154A7A800AFEE8F /* RoundedButton.swift in Sources */,
 				25D480B42157026900C575CB /* MessageService.swift in Sources */,
+				25D480B821570BD400C575CB /* ChannelCell.swift in Sources */,
 				25C03B7C21545B5000AFEE8F /* AppDelegate.swift in Sources */,
+				25D480BB21572F7800C575CB /* AddChannelVC.swift in Sources */,
 				25D4808A2155AAB300C575CB /* UserDataService.swift in Sources */,
 				25D4808E2155EA7400C575CB /* IconCollectionViewCell.swift in Sources */,
 				25C03B96215467A800AFEE8F /* ChatViewController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class RoundedImage: UIImageView {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()
@@ -24,5 +24,5 @@ class RoundedImage: UIImageView {
         self.layer.cornerRadius = self.frame.width / 2
         self.clipsToBounds = true
     }
-
+    
 }

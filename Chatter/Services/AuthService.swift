@@ -92,12 +92,12 @@ extension AuthService {
             
             // Check for error
             if response.result.error == nil {
-//                if let json = response.result.value as? [String:Any] {
-//                    if let email = json["user"] as? String, let token = json["token"] as? String {
-//                        self.userEmail = email
-//                        self.authToken = token
-//                    }
-//                }
+                //                if let json = response.result.value as? [String:Any] {
+                //                    if let email = json["user"] as? String, let token = json["token"] as? String {
+                //                        self.userEmail = email
+                //                        self.authToken = token
+                //                    }
+                //                }
                 
                 // SwiftyJSON
                 guard let data = response.data else {return}
@@ -129,7 +129,7 @@ extension AuthService {
             "avatarName" : avatarName,
             "avatarColor" : avatarColor
         ]
-    
+        
         
         Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {

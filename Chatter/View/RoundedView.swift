@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class RoundedView: UIView {
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpView()
@@ -23,5 +23,5 @@ class RoundedView: UIView {
     func setUpView() {
         self.layer.cornerRadius = 5.0
     }
-
+    
 }

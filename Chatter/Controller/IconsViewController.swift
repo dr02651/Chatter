@@ -25,7 +25,7 @@ class IconsViewController: UIViewController {
         collectionView.dataSource = self
     }
     
-
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -57,19 +57,19 @@ extension IconsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//        if AuthService.instance.isLoggedIn {
-//            if avatarType == .dark {
-//                UserDataService.instance.editAvatarName(editAvatarName: "dark\(indexPath.item)")
-//            } else {
-//                UserDataService.instance.editAvatarName(editAvatarName: "light\(indexPath.item)")
-//            }
-//
-//        } else {
-            if avatarType == .dark {
-                UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
-            } else {
-                UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
-            }
+        //        if AuthService.instance.isLoggedIn {
+        //            if avatarType == .dark {
+        //                UserDataService.instance.editAvatarName(editAvatarName: "dark\(indexPath.item)")
+        //            } else {
+        //                UserDataService.instance.editAvatarName(editAvatarName: "light\(indexPath.item)")
+        //            }
+        //
+        //        } else {
+        if avatarType == .dark {
+            UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+        } else {
+            UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
+        }
         //}
         self.dismiss(animated: true, completion: nil)
     }

@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class GradientView: UIView {
-
+    
     // First gradient color
     @IBInspectable var topColor: UIColor = #colorLiteral(red: 0.2901960784, green: 0.3019607843, blue: 0.8470588235, alpha: 1) {
         didSet {
@@ -35,5 +35,5 @@ class GradientView: UIView {
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     
-
+    
 }

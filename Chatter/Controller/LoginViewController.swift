@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: RoundedButton!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
-
+    
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -58,7 +58,7 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: TO_CREATE_ACCT, sender: self)
     }
     
-     // MARK: Set up placeholder attributes and Gesture recogn
+    // MARK: Set up placeholder attributes and Gesture recogn
     func setUpView() {
         emailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
         passwordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])

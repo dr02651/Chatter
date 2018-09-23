@@ -52,7 +52,7 @@ class CreateAcctViewController: UIViewController, IconPresentable {
     func unwindToHome() {
         performSegue(withIdentifier: UNWIND, sender: nil)
     }
-
+    
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         unwindToHome()
     }
