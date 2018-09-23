@@ -11,7 +11,7 @@ import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
-    // Outlets
+    //MARK: Outlets ##############################################################################
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var loginButton: RoundedButton!
@@ -31,6 +31,8 @@ class LoginViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    //MARK: Login button pressed ##########################################################################
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         view.endEditing(true)
         loginButton.isEnabled = false
@@ -54,11 +56,14 @@ class LoginViewController: UIViewController {
         }
     }
     
+    
+    //MARK: No acct btn pressed ############################################################################
     @IBAction func noAcctButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: TO_CREATE_ACCT, sender: self)
     }
     
-    // MARK: Set up placeholder attributes and Gesture recogn
+    
+    // MARK: Set up placeholder attributes and Gesture recogn ###############################################
     func setUpView() {
         emailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
         passwordText.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
@@ -66,6 +71,4 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
     }
-    
-    
 }

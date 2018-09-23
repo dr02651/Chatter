@@ -65,6 +65,7 @@ class UserDataService {
     }
     
     func logoutUser() {
+        NotificationCenter.default.post(name: NOTIF_USER_LOGOUT, object: nil)
         
         id = ""
         avatarColor = ""
@@ -79,5 +80,8 @@ class UserDataService {
         
         // Clear channels array
         MessageService.instance.clearChannels()
+        
+        // Clear messages array
+        MessageService.instance.clearMessages()
     }
 }

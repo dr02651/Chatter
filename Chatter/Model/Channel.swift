@@ -9,9 +9,8 @@
 import Foundation
 
 
-struct Channel: Codable {
+struct Channel {
     private(set) var id: String
-     private(set) var __v: Int?
     private(set) var channelTitle: String
     private(set) var channelDescription: String
    

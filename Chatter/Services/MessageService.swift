@@ -31,7 +31,7 @@ class MessageService {
                         let name = item["name"].stringValue
                         let channelDescription = item["description"].stringValue
                         
-                        let channel = Channel(id: id, __v: nil, channelTitle: name, channelDescription: channelDescription)
+                        let channel = Channel(id: id, channelTitle: name, channelDescription: channelDescription)
                         self.channels.append(channel)
                     }
                     NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
@@ -46,6 +46,10 @@ class MessageService {
     
     func addToChannelArray(_ channel: Channel) {
         channels.append(channel)
+    }
+    
+    func addToMessagesArray(_ message: Message) {
+        messages.append(message)
     }
     
     func setSelectedChannel(to channel: Channel) {

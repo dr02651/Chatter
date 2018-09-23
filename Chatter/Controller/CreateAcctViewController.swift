@@ -12,7 +12,7 @@ import SVProgressHUD
 class CreateAcctViewController: UIViewController, IconPresentable {
     
     
-    // Outlets
+    //MARK: Outlets ##############################################################################
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
@@ -22,10 +22,12 @@ class CreateAcctViewController: UIViewController, IconPresentable {
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
-    // Variables
+    
+    //MARK: Variables ##############################################################################
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
     var bgColor: UIColor?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,6 @@ class CreateAcctViewController: UIViewController, IconPresentable {
     
     override func viewDidAppear(_ animated: Bool) {
         createAcctButton.isEnabled = true
-        
         if UserDataService.instance.avatarName != "" {
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
@@ -44,6 +45,7 @@ class CreateAcctViewController: UIViewController, IconPresentable {
             userImage.backgroundColor = UIColor.lightGray
         }
     }
+    
     
     @objc func handleTap() {
         view.endEditing(true)
@@ -62,12 +64,13 @@ class CreateAcctViewController: UIViewController, IconPresentable {
         performSegue(withIdentifier: SHOW_ICONS, sender: self)
     }
     
+    
     func goToIcons() {
         present(IconsViewController(), animated: true, completion: nil)
-        //performSegue(withIdentifier: SHOW_ICONS, sender: self)
     }
     
-    // MARK: Generate avatar background colors
+    
+    // MARK: Generate avatar background colors ############################################################
     @IBAction func generateBgcolorPressed(_ sender: UIButton) {
         let r = CGFloat(arc4random_uniform(255)) / 255
         let g = CGFloat(arc4random_uniform(255)) / 255
@@ -80,7 +83,7 @@ class CreateAcctViewController: UIViewController, IconPresentable {
     }
     
     
-    // MARK: Set up placeholder attributes and Gesture recogn
+    // MARK: Set up placeholder attributes and Gesture recogn ##############################################
     func setUpView() {
         usernameText.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
         emailText.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor : CHATTER_PLACEHOLDER_COLOR])
@@ -91,7 +94,7 @@ class CreateAcctViewController: UIViewController, IconPresentable {
     }
     
     
-    // Mark: Create Accout Button Pressed
+    // Mark: Create Accout Button Pressed #################################################################
     @IBAction func createAcctPressed(_ sender: UIButton) {
         createAcctButton.isEnabled = false
         SVProgressHUD.show()
@@ -119,9 +122,6 @@ class CreateAcctViewController: UIViewController, IconPresentable {
             }
         }
     }
-    
-    
-    
 }
 
 

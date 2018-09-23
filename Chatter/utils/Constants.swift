@@ -17,7 +17,7 @@ let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel"
-let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel"
+let URL_GET_MESSAGES = "\(BASE_URL)message/byChannel/"
 
 // Headers
 let HEADER = [
@@ -49,6 +49,7 @@ let CHATTER_PLACEHOLDER_COLOR = #colorLiteral(red: 0.2901960784, green: 0.301960
 let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
 let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
 let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
+let NOTIF_USER_LOGOUT = Notification.Name("userLoggedOut")
 
 
 

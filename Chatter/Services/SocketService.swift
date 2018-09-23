@@ -51,12 +51,11 @@ extension SocketService {
             guard let channelDescription = dataArray[1] as? String else {return}
             guard let channelId = dataArray[2] as? String else {return}
             
-            let newChannel = Channel(id: channelId, __v: nil, channelTitle: channelName, channelDescription: channelDescription)
+            let newChannel = Channel(id: channelId, channelTitle: channelName, channelDescription: channelDescription)
             MessageService.instance.addToChannelArray(newChannel)
             completion(true)
         }
     }
-    
 }
 
 //MARK: Adding messages ##############################################################################
@@ -70,7 +69,41 @@ extension SocketService {
     }
 }
 
+//MARK: Getting messages ##############################################################################
+extension SocketService {
+    
+    func getMessages(completion: @escaping CompletionHandler) {
+        socket.on("messageCreated") { (dataArray, ack) in
+            guard let messageBody = dataArray[0] as? String else {return}
+            guard let channelId = dataArray[2] as? String else {return}
+            guard let userName = dataArray[3] as? String else {return}
+            guard let userAvatar = dataArray[4] as? String else {return}
+            guard let userAvatarColor = dataArray[5] as? String else {return}
+            guard let messageId = dataArray[6] as? String else {return}
+            guard let timeStamp = dataArray[7] as? String else {return}
+            
+            if channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                let newMessage = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: messageId, timeStamp: timeStamp)
+                MessageService.instance.addToMessagesArray(newMessage)
+                completion(true)
+            } else {
+                completion(false)
+            }
+        }
+    }
+}
 
+
+//MARK: Getting typing users ##############################################################################
+extension SocketService {
+    
+    func gettypingUsers(_ completionHandler: @escaping (_ typingUsers: [String:String]) -> Void) {
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String:String] else {return}
+            completionHandler(typingUsers)
+        }
+    }
+}
 
 
 

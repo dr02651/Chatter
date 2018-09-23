@@ -10,12 +10,11 @@ import UIKit
 
 class IconsViewController: UIViewController {
     
-    // Outlets
+    //MARK: Outlets ##############################################################################
     @IBOutlet weak var iconSegControl: UISegmentedControl!
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // Variable
+    //MARK: Variables ##############################################################################
     var avatarType: IconCollectionViewCell.AvatarType = .dark
     
     
@@ -26,10 +25,13 @@ class IconsViewController: UIViewController {
     }
     
     
+    //MARK: Back Btn Pressed ##############################################################################
     @IBAction func backButtonPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    //MARK: Seg Control toggled ############################################################################
     @IBAction func segControlToggled(_ sender: Any) {
         if iconSegControl.selectedSegmentIndex == 1 {
             avatarType = .light
@@ -38,14 +40,11 @@ class IconsViewController: UIViewController {
         }
         collectionView.reloadData()
     }
-    
-    
-    
 }
 
+
+//MARK: DataSource Methods ##############################################################################
 extension IconsViewController: UICollectionViewDataSource {
-    
-    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -57,14 +56,6 @@ extension IconsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //        if AuthService.instance.isLoggedIn {
-        //            if avatarType == .dark {
-        //                UserDataService.instance.editAvatarName(editAvatarName: "dark\(indexPath.item)")
-        //            } else {
-        //                UserDataService.instance.editAvatarName(editAvatarName: "light\(indexPath.item)")
-        //            }
-        //
-        //        } else {
         if avatarType == .dark {
             UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
         } else {
@@ -75,22 +66,20 @@ extension IconsViewController: UICollectionViewDataSource {
     }
 }
 
+
 extension IconsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconCell", for: indexPath) as? IconCollectionViewCell else {return UICollectionViewCell()}
-        
         cell.configureCell(index: indexPath.item, type: avatarType)
-        
-        
         return cell
     }
 }
 
+
 extension IconsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         var numberOfColumns: CGFloat = 3
         
         if UIScreen.main.bounds.width > 320 {
@@ -102,7 +91,6 @@ extension IconsViewController: UICollectionViewDelegateFlowLayout {
         let cellDim: CGFloat = ((collectionView.bounds.width - padding) - (numberOfColumns - 1) * spaceBtwCells) / numberOfColumns
         
         return CGSize(width: cellDim, height: cellDim)
-        
     }
 }
 

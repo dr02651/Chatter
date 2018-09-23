@@ -30,7 +30,7 @@ class AuthService {
     
     var authToken: String {
         get {
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            return defaults.value(forKey: TOKEN_KEY) as? String ?? ""
         }
         set {
             defaults.set(newValue, forKey: TOKEN_KEY)
@@ -55,9 +55,6 @@ extension AuthService {
         
         let lowerCaseEmail = email.lowercased()
         
-        // Headers
-        
-        
         // Body
         let body: [String : Any] = [
             "email" : lowerCaseEmail,
@@ -70,8 +67,9 @@ extension AuthService {
                 completion(true)
             } else {
                 SVProgressHUD.dismiss()
-                completion(false)
                 debugPrint(response.result.error as Any)
+                print("There was an error: AuthService register user")
+                completion(false)
             }
         }
         
@@ -92,14 +90,7 @@ extension AuthService {
             
             // Check for error
             if response.result.error == nil {
-                //                if let json = response.result.value as? [String:Any] {
-                //                    if let email = json["user"] as? String, let token = json["token"] as? String {
-                //                        self.userEmail = email
-                //                        self.authToken = token
-                //                    }
-                //                }
-                
-                // SwiftyJSON
+               
                 guard let data = response.data else {return}
                 let json = JSON(data: data)
                 self.userEmail = json["user"].stringValue
@@ -110,11 +101,10 @@ extension AuthService {
             } else {
                 SVProgressHUD.dismiss()
                 completion(false)
+                print("There was an error: AuthService user login")
                 debugPrint(response.result.error as Any)
             }
         }
-        
-        
     }
     
     

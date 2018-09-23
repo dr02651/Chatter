@@ -10,7 +10,7 @@ import UIKit
 
 class AddChannelVC: UIViewController {
     
-    // Outlets
+    //MARK: Outlets ##############################################################################
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var descriptionText: UITextField!
     @IBOutlet weak var createChannelBg: UIView!
@@ -34,7 +34,7 @@ class AddChannelVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    // Add new channel
+    // Add new channel ##############################################################################
     @IBAction func createChannelButtonPressed(_ sender: RoundedButton) {
         createChannelButton.isEnabled = false
         guard let channelName = titleText.text, titleText.text != "" else {return}
