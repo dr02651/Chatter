@@ -46,7 +46,8 @@ let CHATTER_PLACEHOLDER_COLOR = #colorLiteral(red: 0.2901960784, green: 0.301960
 
 // Notification Constants
 let NOTIF_USER_DATA_CHANGED = Notification.Name("notifUserDataChanged")
-
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")
 
 
 

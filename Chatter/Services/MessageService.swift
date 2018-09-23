@@ -15,6 +15,7 @@ class MessageService {
     static let instance = MessageService()
     
     private(set) var channels = [Channel]()
+    private(set) var selectedChannel: Channel?
     
     func findAllChannels(completion: @escaping CompletionHandler) {
         
@@ -31,6 +32,7 @@ class MessageService {
                         let channel = Channel(id: id, __v: nil, channelTitle: name, channelDescription: channelDescription)
                         self.channels.append(channel)
                     }
+                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     completion(true)
                 }
             } else {
@@ -42,6 +44,14 @@ class MessageService {
     
     func addToChannelArray(_ channel: Channel) {
         channels.append(channel)
+    }
+    
+    func setSelectedChannel(to channel: Channel) {
+        selectedChannel = channel
+    }
+    
+    func clearChannels() {
+        channels.removeAll()
     }
     
 }

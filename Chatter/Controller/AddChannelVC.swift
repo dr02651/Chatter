@@ -14,11 +14,13 @@ class AddChannelVC: UIViewController {
     @IBOutlet weak var titleText: UITextField!
     @IBOutlet weak var descriptionText: UITextField!
     @IBOutlet weak var createChannelBg: UIView!
+    @IBOutlet weak var createChannelButton: RoundedButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
+        createChannelButton.isEnabled = true
     }
     
     
@@ -34,11 +36,13 @@ class AddChannelVC: UIViewController {
     
     // Add new channel
     @IBAction func createChannelButtonPressed(_ sender: RoundedButton) {
+        createChannelButton.isEnabled = false
         guard let channelName = titleText.text, titleText.text != "" else {return}
         guard let channelDescription = descriptionText.text, descriptionText.text != "" else {return}
         
         SocketService.instance.addChannelWith(name: channelName, description: channelDescription) { (success) in
             if success {
+                self.createChannelButton.isEnabled = true
                 self.dismiss(animated: true, completion: nil)
             }
         }

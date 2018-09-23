@@ -15,6 +15,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChannelVC" customModule="Chatter" customModuleProvider="target">
             <connections>
                 <outlet property="createChannelBg" destination="weZ-90-KAp" id="ixa-56-qIn"/>
+                <outlet property="createChannelButton" destination="tjH-rq-yJG" id="bAF-6F-etm"/>
                 <outlet property="descriptionText" destination="AS5-Gv-RDj" id="TRg-Kt-los"/>
                 <outlet property="titleText" destination="C7Z-ES-mYB" id="4so-9O-Esf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
